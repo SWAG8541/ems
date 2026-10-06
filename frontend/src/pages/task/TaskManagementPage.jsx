@@ -504,7 +504,7 @@ const TaskManagementPage = () => {
       field: 'project',
       headerName: 'Project',
       width: 150,
-      valueGetter: (params) => params.row.project?.name || 'N/A'
+      valueGetter: (_value, row) => row.project?.name || 'N/A'
     },
     {
       field: 'assignee',
@@ -523,7 +523,7 @@ const TaskManagementPage = () => {
       field: 'dueDate',
       headerName: 'Due Date',
       width: 120,
-      valueFormatter: (params) => formatDate(params.value)
+      valueFormatter: (value) => formatDate(value)
     },
     {
       field: 'status',
@@ -626,13 +626,13 @@ const TaskManagementPage = () => {
       {projectId && project && (
         <Paper sx={{ p: 2, mb: 3 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Typography variant="h6">{project.name}</Typography>
               <Typography variant="body2" color="text.secondary">
                 {project.description}
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
                 <Chip
                   label={project.status.charAt(0).toUpperCase() + project.status.slice(1).replace('_', ' ')}
@@ -670,7 +670,7 @@ const TaskManagementPage = () => {
       {/* Filters */}
       <Paper sx={{ p: 2, mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <TextField
               fullWidth
               label="Search Tasks"
@@ -682,7 +682,7 @@ const TaskManagementPage = () => {
               }}
             />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth>
               <InputLabel>Priority</InputLabel>
               <Select
@@ -697,7 +697,7 @@ const TaskManagementPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth>
               <InputLabel>Status</InputLabel>
               <Select
@@ -714,7 +714,7 @@ const TaskManagementPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth>
               <InputLabel>Assignee</InputLabel>
               <Select
@@ -747,10 +747,10 @@ const TaskManagementPage = () => {
           <DataGrid
             rows={filteredTasks}
             columns={columns}
-            pageSize={10}
-            rowsPerPageOptions={[10, 25, 50]}
+            initialState={{ pagination: { paginationModel: { pageSize: 10, page: 0 } } }}
+            pageSizeOptions={[10, 25, 50]}
             checkboxSelection={false}
-            disableSelectionOnClick
+            disableRowSelectionOnClick
             getRowId={(row) => row._id}
             loading={loading}
           />
@@ -769,7 +769,7 @@ const TaskManagementPage = () => {
         </DialogTitle>
         <DialogContent dividers>
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Task Title"
@@ -782,7 +782,7 @@ const TaskManagementPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Description"
@@ -797,7 +797,7 @@ const TaskManagementPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth error={!!formErrors.project} required>
                 <InputLabel>Project</InputLabel>
                 <Select
@@ -814,7 +814,7 @@ const TaskManagementPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth error={!!formErrors.assignee} required>
                 <InputLabel>Assignee</InputLabel>
                 <Select
@@ -834,7 +834,7 @@ const TaskManagementPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Due Date"
                 value={taskFormData.dueDate}
@@ -849,7 +849,7 @@ const TaskManagementPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Priority</InputLabel>
                 <Select
@@ -865,7 +865,7 @@ const TaskManagementPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -883,7 +883,7 @@ const TaskManagementPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Estimated Hours"

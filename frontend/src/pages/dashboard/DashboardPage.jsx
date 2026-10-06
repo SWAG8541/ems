@@ -141,7 +141,7 @@ const DashboardPage = () => {
       {loading ? (
         <Grid container spacing={3}>
           {[1, 2, 3].map((item) => (
-            <Grid item xs={12} sm={6} md={4} key={item}>
+            <Grid key={item} size={{ xs: 12, sm: 6, md: 4 }}>
               <Paper sx={{ p: 3 }}>
                 <Skeleton variant="rectangular" height={60} sx={{ mb: 2 }} />
                 <Skeleton variant="text" height={40} width="40%" />
@@ -155,7 +155,7 @@ const DashboardPage = () => {
           <Grid container spacing={3} sx={{ mb: 4 }}>
             {/* CMS Cards */}
             {canViewContent && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -201,7 +201,7 @@ const DashboardPage = () => {
 
             {/* User Management Cards */}
             {canViewUsers && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -246,7 +246,7 @@ const DashboardPage = () => {
             )}
 
             {canViewRoles && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -292,7 +292,7 @@ const DashboardPage = () => {
 
             {/* HRMS Cards */}
             {canViewEmployees && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -337,7 +337,7 @@ const DashboardPage = () => {
             )}
 
             {canViewLeaves && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -383,7 +383,7 @@ const DashboardPage = () => {
 
             {/* PMS Cards */}
             {canViewProjects && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -428,7 +428,7 @@ const DashboardPage = () => {
             )}
 
             {canViewTasks && (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card elevation={2}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -474,7 +474,7 @@ const DashboardPage = () => {
           </Grid>
 
           <Grid container spacing={3}>
-            <Grid item xs={12} md={7}>
+            <Grid size={{ xs: 12, md: 7 }}>
               <Paper elevation={2} sx={{ p: 3, height: '100%' }}>
                 <Typography variant="h6" component="h2" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                   <DashboardIcon sx={{ mr: 1 }} /> Recent Activity
@@ -526,7 +526,7 @@ const DashboardPage = () => {
               </Paper>
             </Grid>
 
-            <Grid item xs={12} md={5}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <Paper elevation={2} sx={{ p: 3, height: '100%' }}>
                 <Typography variant="h6" component="h2" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                   <AddIcon sx={{ mr: 1 }} /> Quick Actions

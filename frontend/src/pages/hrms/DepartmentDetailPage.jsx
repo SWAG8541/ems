@@ -281,7 +281,7 @@ const DepartmentDetailPage = () => {
         {/* Overview Tab */}
         <TabPanel value={tabValue} index={0}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Department Information" />
                 <Divider />
@@ -325,7 +325,7 @@ const DepartmentDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Department Manager" />
                 <Divider />
@@ -375,7 +375,7 @@ const DepartmentDetailPage = () => {
           <Grid container spacing={2}>
             {employees.length > 0 ? (
               employees.map((employee) => (
-                <Grid item xs={12} sm={6} md={4} key={employee._id}>
+                <Grid key={employee._id} size={{ xs: 12, sm: 6, md: 4 }}>
                   <Card>
                     <CardContent>
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -415,7 +415,7 @@ const DepartmentDetailPage = () => {
                 </Grid>
               ))
             ) : (
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Paper sx={{ p: 3, textAlign: 'center' }}>
                   <Typography variant="body1" color="text.secondary">
                     No employees in this department
@@ -429,7 +429,7 @@ const DepartmentDetailPage = () => {
         {/* Budget Tab */}
         <TabPanel value={tabValue} index={2}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Budget Overview" />
                 <Divider />
@@ -472,7 +472,7 @@ const DepartmentDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Budget Visualization" />
                 <Divider />

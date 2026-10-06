@@ -306,7 +306,7 @@ const EmployeeDetailPage = () => {
         {/* Personal Info Tab */}
         <TabPanel value={tabValue} index={0}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Personal Information" />
                 <Divider />
@@ -340,7 +340,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Contact Information" />
                 <Divider />
@@ -370,7 +370,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Card>
                 <CardHeader title="Emergency Contact" />
                 <Divider />
@@ -406,7 +406,7 @@ const EmployeeDetailPage = () => {
         {/* Employment Tab */}
         <TabPanel value={tabValue} index={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Employment Details" />
                 <Divider />
@@ -464,7 +464,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Salary & Bank Details" />
                 <Divider />
@@ -511,7 +511,7 @@ const EmployeeDetailPage = () => {
         {/* Skills & Education Tab */}
         <TabPanel value={tabValue} index={2}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader
                   title="Skills"
@@ -544,7 +544,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader
                   title="Education"
@@ -602,7 +602,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Card>
                 <CardHeader
                   title="Work Experience"
@@ -672,7 +672,7 @@ const EmployeeDetailPage = () => {
           <Grid container spacing={3}>
             {employee.documents && employee.documents.length > 0 ? (
               employee.documents.map((doc, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
+                <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
                   <Card>
                     <CardHeader
                       title={doc.name}
@@ -707,7 +707,7 @@ const EmployeeDetailPage = () => {
                 </Grid>
               ))
             ) : (
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Paper sx={{ p: 3, textAlign: 'center' }}>
                   <Typography variant="body1" color="text.secondary">
                     No documents uploaded yet.
@@ -721,7 +721,7 @@ const EmployeeDetailPage = () => {
         {/* Leave & Attendance Tab */}
         <TabPanel value={tabValue} index={4}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Leave Balance" />
                 <Divider />
@@ -765,7 +765,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card>
                 <CardHeader title="Attendance Settings" />
                 <Divider />
@@ -816,7 +816,7 @@ const EmployeeDetailPage = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                 <Typography variant="h6">Recent Attendance</Typography>
                 <Button

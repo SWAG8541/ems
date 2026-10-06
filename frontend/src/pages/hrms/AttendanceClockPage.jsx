@@ -470,7 +470,7 @@ const AttendanceClockPage = () => {
       ) : (
         <Grid container spacing={3}>
           {/* Current Date and Time */}
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Paper sx={{ p: 3, textAlign: 'center' }}>
               <Typography variant="h5" gutterBottom>
                 {formatDate(attendance.date)}
@@ -482,7 +482,7 @@ const AttendanceClockPage = () => {
           </Grid>
 
           {/* Attendance Status Card */}
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
@@ -504,7 +504,7 @@ const AttendanceClockPage = () => {
                 </Box>
 
                 <Grid container spacing={2}>
-                  <Grid item xs={6}>
+                  <Grid size={{ xs: 6 }}>
                     <Typography variant="body2" color="text.secondary">
                       Clock In
                     </Typography>
@@ -513,7 +513,7 @@ const AttendanceClockPage = () => {
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={6}>
+                  <Grid size={{ xs: 6 }}>
                     <Typography variant="body2" color="text.secondary">
                       Clock Out
                     </Typography>
@@ -522,11 +522,11 @@ const AttendanceClockPage = () => {
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Divider sx={{ my: 1 }} />
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="body2" color="text.secondary">
                       Total Working Hours
                     </Typography>
@@ -537,11 +537,11 @@ const AttendanceClockPage = () => {
 
                   {attendance.notes && (
                     <>
-                      <Grid item xs={12}>
+                      <Grid size={{ xs: 12 }}>
                         <Divider sx={{ my: 1 }} />
                       </Grid>
 
-                      <Grid item xs={12}>
+                      <Grid size={{ xs: 12 }}>
                         <Typography variant="body2" color="text.secondary">
                           Today's Goals/Notes
                         </Typography>
@@ -619,7 +619,7 @@ const AttendanceClockPage = () => {
           </Grid>
 
           {/* Breaks Card */}
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card>
               <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>
@@ -633,11 +633,11 @@ const AttendanceClockPage = () => {
                     </Typography>
 
                     <Grid container spacing={2} alignItems="center">
-                      <Grid item>
+                      <Grid>
                         {getBreakTypeIcon(attendance.currentBreak.type)}
                       </Grid>
 
-                      <Grid item xs>
+                      <Grid xs>
                         <Typography variant="body1">
                           {attendance.currentBreak.type.charAt(0).toUpperCase() + attendance.currentBreak.type.slice(1)} Break
                         </Typography>
@@ -651,7 +651,7 @@ const AttendanceClockPage = () => {
                         )}
                       </Grid>
 
-                      <Grid item>
+                      <Grid>
                         <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'secondary.main' }}>
                           {breakElapsedTime}
                         </Typography>
@@ -673,11 +673,11 @@ const AttendanceClockPage = () => {
                     {attendance.breaks.map((breakItem, index) => (
                       <Box key={index} sx={{ mb: 2, p: 1, borderBottom: '1px solid #eee' }}>
                         <Grid container spacing={2} alignItems="center">
-                          <Grid item>
+                          <Grid>
                             {getBreakTypeIcon(breakItem.type)}
                           </Grid>
 
-                          <Grid item xs>
+                          <Grid xs>
                             <Typography variant="body1">
                               {breakItem.type.charAt(0).toUpperCase() + breakItem.type.slice(1)} Break
                             </Typography>
@@ -691,7 +691,7 @@ const AttendanceClockPage = () => {
                             )}
                           </Grid>
 
-                          <Grid item>
+                          <Grid>
                             <Chip
                               label={breakItem.duration}
                               size="small"
@@ -724,7 +724,7 @@ const AttendanceClockPage = () => {
 
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom>
                 Current Time: {formatTime(new Date())}
               </Typography>
@@ -737,7 +737,7 @@ const AttendanceClockPage = () => {
             </Grid>
 
             {new Date().getHours() >= 9 && new Date().getMinutes() > 0 && (
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <TextField
                   fullWidth
                   label="Reason for Late Arrival"
@@ -748,7 +748,7 @@ const AttendanceClockPage = () => {
               </Grid>
             )}
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Goals for Today"
@@ -791,7 +791,7 @@ const AttendanceClockPage = () => {
 
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom>
                 Current Time: {formatTime(new Date())}
               </Typography>
@@ -803,7 +803,7 @@ const AttendanceClockPage = () => {
               )}
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Summary of Your Day"
@@ -816,7 +816,7 @@ const AttendanceClockPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Tasks Completed"
@@ -858,13 +858,13 @@ const AttendanceClockPage = () => {
 
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom>
                 Current Time: {formatTime(new Date())}
               </Typography>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl fullWidth>
                 <InputLabel>Break Type</InputLabel>
                 <Select
@@ -880,7 +880,7 @@ const AttendanceClockPage = () => {
             </Grid>
 
             {breakType === 'other' && (
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <TextField
                   fullWidth
                   label="Reason for Break"

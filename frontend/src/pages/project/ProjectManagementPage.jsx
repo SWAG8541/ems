@@ -450,13 +450,13 @@ const ProjectManagementPage = () => {
       field: 'startDate',
       headerName: 'Start Date',
       width: 120,
-      valueFormatter: (params) => formatDate(params.value)
+      valueFormatter: (value) => formatDate(value)
     },
     {
       field: 'endDate',
       headerName: 'End Date',
       width: 120,
-      valueFormatter: (params) => formatDate(params.value)
+      valueFormatter: (value) => formatDate(value)
     },
     {
       field: 'status',
@@ -555,7 +555,7 @@ const ProjectManagementPage = () => {
 
       {/* Project Stats */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -570,7 +570,7 @@ const ProjectManagementPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -585,7 +585,7 @@ const ProjectManagementPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -600,7 +600,7 @@ const ProjectManagementPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -620,7 +620,7 @@ const ProjectManagementPage = () => {
       {/* Project Filters */}
       <Box sx={{ mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={8}>
+          <Grid size={{ xs: 12, md: 8 }}>
             <Tabs value={tabValue} onChange={handleTabChange}>
               <Tab label="Active Projects" />
               <Tab label="Planning" />
@@ -628,7 +628,7 @@ const ProjectManagementPage = () => {
               <Tab label="All Projects" />
             </Tabs>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField
               fullWidth
               placeholder="Search projects..."
@@ -653,10 +653,10 @@ const ProjectManagementPage = () => {
           <DataGrid
             rows={filteredProjects}
             columns={columns}
-            pageSize={10}
-            rowsPerPageOptions={[5, 10, 20]}
+            initialState={{ pagination: { paginationModel: { pageSize: 10, page: 0 } } }}
+            pageSizeOptions={[5, 10, 20]}
             getRowId={(row) => row._id}
-            disableSelectionOnClick
+            disableRowSelectionOnClick
           />
         )}
       </Paper>
@@ -673,7 +673,7 @@ const ProjectManagementPage = () => {
         </DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 name="name"
                 label="Project Name"
@@ -684,7 +684,7 @@ const ProjectManagementPage = () => {
                 helperText={formErrors.name}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 name="client"
                 label="Client"
@@ -693,7 +693,7 @@ const ProjectManagementPage = () => {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 name="description"
                 label="Description"
@@ -706,7 +706,7 @@ const ProjectManagementPage = () => {
                 helperText={formErrors.description}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Start Date"
                 value={projectFormData.startDate}
@@ -720,7 +720,7 @@ const ProjectManagementPage = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="End Date"
                 value={projectFormData.endDate}
@@ -734,7 +734,7 @@ const ProjectManagementPage = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -751,7 +751,7 @@ const ProjectManagementPage = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <FormControl fullWidth>
                 <InputLabel>Priority</InputLabel>
                 <Select
@@ -766,7 +766,7 @@ const ProjectManagementPage = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <TextField
                 name="budget"
                 label="Budget"
@@ -776,7 +776,7 @@ const ProjectManagementPage = () => {
                 type="number"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl fullWidth error={!!formErrors.manager}>
                 <InputLabel>Project Manager</InputLabel>
                 <Select
@@ -834,7 +834,7 @@ const ProjectManagementPage = () => {
                   Add Team Member
                 </Typography>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} md={5}>
+                  <Grid size={{ xs: 12, md: 5 }}>
                     <FormControl fullWidth>
                       <InputLabel>Employee</InputLabel>
                       <Select
@@ -853,7 +853,7 @@ const ProjectManagementPage = () => {
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12} md={5}>
+                  <Grid size={{ xs: 12, md: 5 }}>
                     <FormControl fullWidth>
                       <InputLabel>Role</InputLabel>
                       <Select
@@ -873,7 +873,7 @@ const ProjectManagementPage = () => {
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12} md={2}>
+                  <Grid size={{ xs: 12, md: 2 }}>
                     <Button
                       variant="contained"
                       color="primary"
@@ -897,7 +897,7 @@ const ProjectManagementPage = () => {
               {selectedProject.team && selectedProject.team.length > 0 ? (
                 <Grid container spacing={2}>
                   {selectedProject.team.map((member) => (
-                    <Grid item xs={12} md={6} key={member._id || member.employee?._id}>
+                    <Grid key={member._id || member.employee?._id} size={{ xs: 12, md: 6 }}>
                       <Card variant="outlined">
                         <CardContent sx={{ py: 1 }}>
                           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

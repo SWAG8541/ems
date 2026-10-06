@@ -20,7 +20,7 @@ import {
   Divider,
   Chip
 } from '@mui/material';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import SimpleDatePicker from '../../components/SimpleDatePicker';
 import {
   PieChart,
   Pie,
@@ -198,8 +198,8 @@ const AttendanceReportPage = () => {
           </Typography>
 
           <Grid container spacing={3}>
-            <Grid item xs={12} md={3}>
-              <DatePicker
+            <Grid size={{ xs: 12, md: 3 }}>
+              <SimpleDatePicker
                 label="Start Date"
                 value={startDate}
                 onChange={(newValue) => setStartDate(newValue)}
@@ -207,8 +207,8 @@ const AttendanceReportPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={3}>
-              <DatePicker
+            <Grid size={{ xs: 12, md: 3 }}>
+              <SimpleDatePicker
                 label="End Date"
                 value={endDate}
                 onChange={(newValue) => setEndDate(newValue)}
@@ -216,7 +216,7 @@ const AttendanceReportPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={3}>
+            <Grid size={{ xs: 12, md: 3 }}>
               <TextField
                 select
                 label="Department"
@@ -236,7 +236,7 @@ const AttendanceReportPage = () => {
               </TextField>
             </Grid>
 
-            <Grid item xs={12} md={3}>
+            <Grid size={{ xs: 12, md: 3 }}>
               <TextField
                 select
                 label="Employee"
@@ -282,7 +282,7 @@ const AttendanceReportPage = () => {
         ) : (
           <>
             <Grid container spacing={3} sx={{ mb: 3 }}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Card>
                   <CardContent>
                     <Typography variant="h6" gutterBottom>
@@ -312,7 +312,7 @@ const AttendanceReportPage = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Card>
                   <CardContent>
                     <Typography variant="h6" gutterBottom>

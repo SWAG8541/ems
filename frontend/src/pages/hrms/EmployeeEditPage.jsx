@@ -285,7 +285,7 @@ const EmployeeEditPage = () => {
           {activeStep === 0 && (
             <Grid container spacing={3}>
               {/* Personal Information */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Employee ID"
@@ -297,7 +297,7 @@ const EmployeeEditPage = () => {
                   disabled // Employee ID should not be editable
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Name"
@@ -317,7 +317,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.name}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Email"
@@ -337,7 +337,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.email}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <FormControl fullWidth error={!!formErrors.status}>
                   <InputLabel>Status</InputLabel>
                   <Select
@@ -354,7 +354,7 @@ const EmployeeEditPage = () => {
                   {formErrors.status && <FormHelperText>{formErrors.status}</FormHelperText>}
                 </FormControl>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Date of Birth"
@@ -367,7 +367,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.dateOfBirth}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <FormControl fullWidth error={!!formErrors.gender}>
                   <InputLabel>Gender</InputLabel>
                   <Select
@@ -383,7 +383,7 @@ const EmployeeEditPage = () => {
                   {formErrors.gender && <FormHelperText>{formErrors.gender}</FormHelperText>}
                 </FormControl>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <FormControl fullWidth error={!!formErrors.maritalStatus}>
                   <InputLabel>Marital Status</InputLabel>
                   <Select
@@ -406,7 +406,7 @@ const EmployeeEditPage = () => {
           {activeStep === 1 && (
             <Grid container spacing={3}>
               {/* Employment Details */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Position"
@@ -417,7 +417,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.position}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Department"
@@ -428,7 +428,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.department}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Join Date"
@@ -441,7 +441,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.joinDate}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <FormControl fullWidth error={!!formErrors.employmentType}>
                   <InputLabel>Employment Type</InputLabel>
                   <Select
@@ -458,7 +458,7 @@ const EmployeeEditPage = () => {
                   {formErrors.employmentType && <FormHelperText>{formErrors.employmentType}</FormHelperText>}
                 </FormControl>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Work Hours Per Week"
@@ -469,7 +469,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.workHoursPerWeek}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Salary Amount"
@@ -491,7 +491,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.salaryAmount}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Salary Currency"
@@ -518,7 +518,7 @@ const EmployeeEditPage = () => {
           {activeStep === 2 && (
             <Grid container spacing={3}>
               {/* Contact Information */}
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <TextField
                   fullWidth
                   label="Address"
@@ -530,7 +530,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.address}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Phone"
@@ -540,12 +540,12 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.phone}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
                   Emergency Contact
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Emergency Contact Name"
@@ -566,7 +566,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.emergencyContactName}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Emergency Contact Relationship"
@@ -587,7 +587,7 @@ const EmployeeEditPage = () => {
                   helperText={formErrors.emergencyContactRelationship}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField
                   fullWidth
                   label="Emergency Contact Phone"

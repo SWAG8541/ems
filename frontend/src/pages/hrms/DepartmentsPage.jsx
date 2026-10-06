@@ -402,7 +402,7 @@ const DepartmentsPage = () => {
 
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Department Name"
@@ -416,7 +416,7 @@ const DepartmentsPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -431,7 +431,7 @@ const DepartmentsPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Description"
@@ -444,7 +444,7 @@ const DepartmentsPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Parent Department</InputLabel>
                 <Select
@@ -466,7 +466,7 @@ const DepartmentsPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Department Manager</InputLabel>
                 <Select

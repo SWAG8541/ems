@@ -305,14 +305,14 @@ const EmployeeCreatePage = () => {
       case 0:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom>
                 User Account
               </Typography>
               <Divider sx={{ mb: 2 }} />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl fullWidth>
                 <InputLabel id="user-selection-label">User Account</InputLabel>
                 <Select
@@ -339,7 +339,7 @@ const EmployeeCreatePage = () => {
 
             {createNewUser ? (
               <>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <TextField
                     fullWidth
                     label="Full Name"
@@ -351,7 +351,7 @@ const EmployeeCreatePage = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <TextField
                     fullWidth
                     label="Email"
@@ -364,7 +364,7 @@ const EmployeeCreatePage = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <TextField
                     fullWidth
                     label="Password"
@@ -379,7 +379,7 @@ const EmployeeCreatePage = () => {
                 </Grid>
               </>
             ) : (
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Autocomplete
                   options={existingUsers}
                   getOptionLabel={(option) => `${option.name} (${option.email})`}
@@ -397,14 +397,14 @@ const EmployeeCreatePage = () => {
               </Grid>
             )}
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
                 Basic Information
               </Typography>
               <Divider sx={{ mb: 2 }} />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Employee ID"
@@ -415,7 +415,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Position"
@@ -428,7 +428,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Join Date"
                 value={formData.joinDate}
@@ -444,7 +444,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -465,14 +465,14 @@ const EmployeeCreatePage = () => {
       case 1:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom>
                 Employment Details
               </Typography>
               <Divider sx={{ mb: 2 }} />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth error={!!errors.department}>
                 <InputLabel>Department</InputLabel>
                 <Select
@@ -492,7 +492,7 @@ const EmployeeCreatePage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Manager</InputLabel>
                 <Select
@@ -511,7 +511,7 @@ const EmployeeCreatePage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Employment Type</InputLabel>
                 <Select
@@ -529,7 +529,7 @@ const EmployeeCreatePage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Work Hours Per Week"
@@ -541,13 +541,13 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom sx={{ mt: 2 }}>
                 Salary Information
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Salary Amount"
@@ -561,7 +561,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Currency</InputLabel>
                 <Select
@@ -578,13 +578,13 @@ const EmployeeCreatePage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom sx={{ mt: 2 }}>
                 Bank Details
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Bank Name"
@@ -594,7 +594,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Account Number"
@@ -604,7 +604,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Branch Code"
@@ -619,14 +619,14 @@ const EmployeeCreatePage = () => {
       case 2:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom>
                 Contact Information
               </Typography>
               <Divider sx={{ mb: 2 }} />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Address"
@@ -638,7 +638,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Phone Number"
@@ -651,13 +651,13 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom sx={{ mt: 2 }}>
                 Emergency Contact
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Emergency Contact Name"
@@ -667,7 +667,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Relationship"
@@ -677,7 +677,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Emergency Contact Phone"
@@ -692,14 +692,14 @@ const EmployeeCreatePage = () => {
       case 3:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom>
                 Personal Information
               </Typography>
               <Divider sx={{ mb: 2 }} />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Date of Birth"
                 value={formData.personalInfo.dateOfBirth}
@@ -712,7 +712,7 @@ const EmployeeCreatePage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Gender</InputLabel>
                 <Select
@@ -729,7 +729,7 @@ const EmployeeCreatePage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Marital Status</InputLabel>
                 <Select

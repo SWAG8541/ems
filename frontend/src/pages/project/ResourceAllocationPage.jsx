@@ -324,7 +324,7 @@ const ResourceAllocationPage = () => {
       {/* Filters */}
       <Paper sx={{ p: 2, mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Department</InputLabel>
               <Select
@@ -343,7 +343,7 @@ const ResourceAllocationPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Project</InputLabel>
               <Select
@@ -362,7 +362,7 @@ const ResourceAllocationPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
               <Typography variant="body2" color="text.secondary">
                 Showing {resourceData.length} of {employees.length} employees
@@ -374,7 +374,7 @@ const ResourceAllocationPage = () => {
 
       {/* Summary Cards */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -389,7 +389,7 @@ const ResourceAllocationPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -404,7 +404,7 @@ const ResourceAllocationPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -419,7 +419,7 @@ const ResourceAllocationPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -449,7 +449,7 @@ const ResourceAllocationPage = () => {
       <TabPanel value={tabValue} index={0}>
         <Grid container spacing={3}>
           {resourceData.map(item => (
-            <Grid item xs={12} sm={6} md={4} key={item.employee._id}>
+            <Grid key={item.employee._id} size={{ xs: 12, sm: 6, md: 4 }}>
               <Card
                 sx={{
                   cursor: 'pointer',
@@ -493,7 +493,7 @@ const ResourceAllocationPage = () => {
                   </Box>
 
                   <Grid container spacing={1}>
-                    <Grid item xs={6}>
+                    <Grid size={{ xs: 6 }}>
                       <Typography variant="body2" color="text.secondary">
                         Total Tasks
                       </Typography>
@@ -501,7 +501,7 @@ const ResourceAllocationPage = () => {
                         {item.totalTasks}
                       </Typography>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid size={{ xs: 6 }}>
                       <Typography variant="body2" color="text.secondary">
                         Estimated Hours
                       </Typography>
@@ -509,7 +509,7 @@ const ResourceAllocationPage = () => {
                         {item.totalEstimatedHours}
                       </Typography>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid size={{ xs: 6 }}>
                       <Typography variant="body2" color="text.secondary">
                         Pending
                       </Typography>
@@ -517,7 +517,7 @@ const ResourceAllocationPage = () => {
                         {item.pendingTasks}
                       </Typography>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid size={{ xs: 6 }}>
                       <Typography variant="body2" color="text.secondary">
                         In Progress
                       </Typography>
@@ -633,7 +633,7 @@ const ResourceAllocationPage = () => {
             </DialogTitle>
             <DialogContent dividers>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={4}>
+                <Grid size={{ xs: 12, md: 4 }}>
                   <Card variant="outlined">
                     <CardContent>
                       <Typography variant="h6" gutterBottom>
@@ -678,7 +678,7 @@ const ResourceAllocationPage = () => {
                   </Card>
                 </Grid>
 
-                <Grid item xs={12} md={8}>
+                <Grid size={{ xs: 12, md: 8 }}>
                   <Card variant="outlined">
                     <CardContent>
                       <Typography variant="h6" gutterBottom>
@@ -720,7 +720,7 @@ const ResourceAllocationPage = () => {
                   </Card>
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Card variant="outlined">
                     <CardContent>
                       <Typography variant="h6" gutterBottom>

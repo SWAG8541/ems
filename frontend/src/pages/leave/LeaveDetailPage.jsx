@@ -356,7 +356,7 @@ const LeaveDetailPage = () => {
       {leave && (
         <Grid container spacing={3}>
           {/* Leave Details */}
-          <Grid item xs={12} md={8}>
+          <Grid size={{ xs: 12, md: 8 }}>
             <Paper sx={{ p: 3, mb: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h5" gutterBottom>
@@ -371,7 +371,7 @@ const LeaveDetailPage = () => {
               <Divider sx={{ mb: 3 }} />
               
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Leave Type
                   </Typography>
@@ -383,7 +383,7 @@ const LeaveDetailPage = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Employee
                   </Typography>
@@ -395,7 +395,7 @@ const LeaveDetailPage = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Start Date
                   </Typography>
@@ -407,7 +407,7 @@ const LeaveDetailPage = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     End Date
                   </Typography>
@@ -419,7 +419,7 @@ const LeaveDetailPage = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Total Days
                   </Typography>
@@ -428,7 +428,7 @@ const LeaveDetailPage = () => {
                   </Typography>
                 </Grid>
                 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Applied On
                   </Typography>
@@ -440,7 +440,7 @@ const LeaveDetailPage = () => {
                   </Box>
                 </Grid>
                 
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Reason
                   </Typography>
@@ -453,7 +453,7 @@ const LeaveDetailPage = () => {
                 
                 {leave.status !== 'pending' && (
                   <>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <Divider sx={{ my: 2 }} />
                       <Typography variant="h6" gutterBottom>
                         Status Information
@@ -461,7 +461,7 @@ const LeaveDetailPage = () => {
                     </Grid>
                     
                     {leave.approvedBy && (
-                      <Grid item xs={12} md={6}>
+                      <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="subtitle1" gutterBottom>
                           {leave.status === 'approved' ? 'Approved By' : 'Rejected By'}
                         </Typography>
@@ -475,7 +475,7 @@ const LeaveDetailPage = () => {
                     )}
                     
                     {leave.approvalDate && (
-                      <Grid item xs={12} md={6}>
+                      <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="subtitle1" gutterBottom>
                           {leave.status === 'approved' ? 'Approved On' : 'Rejected On'}
                         </Typography>
@@ -489,7 +489,7 @@ const LeaveDetailPage = () => {
                     )}
                     
                     {leave.statusHistory && leave.statusHistory.length > 0 && (
-                      <Grid item xs={12}>
+                      <Grid size={{ xs: 12 }}>
                         <Typography variant="subtitle1" gutterBottom>
                           Status History
                         </Typography>
@@ -537,7 +537,7 @@ const LeaveDetailPage = () => {
                 <Divider sx={{ mb: 3 }} />
                 
                 <Grid container spacing={3}>
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Name
                     </Typography>
@@ -546,7 +546,7 @@ const LeaveDetailPage = () => {
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Phone
                     </Typography>
@@ -555,7 +555,7 @@ const LeaveDetailPage = () => {
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Relationship
                     </Typography>
@@ -577,7 +577,7 @@ const LeaveDetailPage = () => {
                 
                 <Grid container spacing={3}>
                   {leave.workCoveredBy && (
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                       <Typography variant="subtitle1" gutterBottom>
                         Work Covered By
                       </Typography>
@@ -591,7 +591,7 @@ const LeaveDetailPage = () => {
                   )}
                   
                   {leave.handoverNotes && (
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <Typography variant="subtitle1" gutterBottom>
                         Handover Notes
                       </Typography>
@@ -608,7 +608,7 @@ const LeaveDetailPage = () => {
           </Grid>
           
           {/* Comments Section */}
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Paper sx={{ p: 3, mb: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h5" gutterBottom>

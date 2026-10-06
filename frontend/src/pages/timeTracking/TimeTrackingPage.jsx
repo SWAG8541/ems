@@ -588,7 +588,7 @@ const TimeTrackingPage = () => {
 
       {/* Clock In/Out Card */}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -748,7 +748,7 @@ const TimeTrackingPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -1063,7 +1063,7 @@ const TimeTrackingPage = () => {
         <DialogTitle>Add Time Entry</DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 name="date"
                 label="Date"
@@ -1074,7 +1074,7 @@ const TimeTrackingPage = () => {
                 InputLabelProps={{ shrink: true }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 select
                 name="project"
@@ -1093,7 +1093,7 @@ const TimeTrackingPage = () => {
                 ))}
               </TextField>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 select
                 name="task"
@@ -1113,7 +1113,7 @@ const TimeTrackingPage = () => {
                 ))}
               </TextField>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 name="description"
                 label="Description"
@@ -1124,7 +1124,7 @@ const TimeTrackingPage = () => {
                 rows={2}
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               <TextField
                 name="startTime"
                 label="Start Time"
@@ -1135,7 +1135,7 @@ const TimeTrackingPage = () => {
                 InputLabelProps={{ shrink: true }}
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               <TextField
                 name="endTime"
                 label="End Time"
@@ -1146,7 +1146,7 @@ const TimeTrackingPage = () => {
                 InputLabelProps={{ shrink: true }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 select
                 name="billable"

@@ -6,7 +6,7 @@ const Department = require('../models/department.model');
 require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cms')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ems')
   .then(async () => {
     console.log('Connected to MongoDB');
     

@@ -279,7 +279,7 @@ const TimeEntriesPage = () => {
       </Typography>
 
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
@@ -296,7 +296,7 @@ const TimeEntriesPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
@@ -311,7 +311,7 @@ const TimeEntriesPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
@@ -377,7 +377,7 @@ const TimeEntriesPage = () => {
         {showFilters && (
           <Box sx={{ mb: 2 }}>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={12} md={3}>
+              <Grid size={{ xs: 12, md: 3 }}>
                 <TextField
                   select
                   label="Date Range"
@@ -395,7 +395,7 @@ const TimeEntriesPage = () => {
 
               {dateRange === 'custom' && (
                 <>
-                  <Grid item xs={12} md={3}>
+                  <Grid size={{ xs: 12, md: 3 }}>
                     <SimpleDatePicker
                       label="Start Date"
                       value={startDate}
@@ -404,7 +404,7 @@ const TimeEntriesPage = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={3}>
+                  <Grid size={{ xs: 12, md: 3 }}>
                     <SimpleDatePicker
                       label="End Date"
                       value={endDate}
@@ -415,7 +415,7 @@ const TimeEntriesPage = () => {
                 </>
               )}
 
-              <Grid item xs={12} md={dateRange === 'custom' ? 3 : 6}>
+              <Grid size={{ xs: 12, md: dateRange === 'custom' ? 3 : 6 }}>
                 <TextField
                   select
                   label="Project"

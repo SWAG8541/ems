@@ -157,7 +157,7 @@ const SettingsPage = () => {
       </Typography>
       
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="First Name"
@@ -167,7 +167,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="Last Name"
@@ -177,7 +177,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="Email"
@@ -188,7 +188,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="Phone"
@@ -198,7 +198,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="Job Title"
@@ -208,7 +208,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label="Department"
@@ -218,7 +218,7 @@ const SettingsPage = () => {
           />
         </Grid>
         
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextField
             fullWidth
             label="Bio"

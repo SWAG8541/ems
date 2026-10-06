@@ -211,7 +211,7 @@ const LoginPage = () => {
             </Button>
 
             <Grid container justifyContent="center">
-              <Grid item>
+              <Grid>
                 <Typography variant="body2" color="text.secondary" align="center">
                   Don't have an account? Contact your administrator.
                 </Typography>

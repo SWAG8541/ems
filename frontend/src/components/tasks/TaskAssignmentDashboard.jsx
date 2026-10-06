@@ -425,7 +425,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
     const workloadColor = workload > 75 ? 'error' : workload > 50 ? 'warning' : 'success';
     
     return (
-      <Grid item xs={12} md={6} lg={4} key={employeeId}>
+      <Grid key={employeeId} size={{ xs: 12, md: 6, lg: 4 }}>
         <Card>
           <CardHeader
             avatar={
@@ -529,7 +529,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
     const unassignedTasks = tasksByAssignee.unassigned || [];
     
     return (
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <Card sx={{ bgcolor: '#f5f5f5' }}>
           <CardHeader
             avatar={
@@ -654,7 +654,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
       {/* Filters */}
       <Paper sx={{ p: 2, mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Project</InputLabel>
               <Select
@@ -671,7 +671,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Status</InputLabel>
               <Select
@@ -687,7 +687,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Priority</InputLabel>
               <Select
@@ -703,7 +703,7 @@ const TaskAssignmentDashboard = ({ projectId }) => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
               <Button
                 variant="outlined"

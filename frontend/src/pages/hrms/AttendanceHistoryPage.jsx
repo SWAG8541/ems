@@ -283,7 +283,7 @@ const AttendanceHistoryPage = () => {
 
       {/* Summary Cards */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" color="text.secondary" gutterBottom>
@@ -299,7 +299,7 @@ const AttendanceHistoryPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" color="text.secondary" gutterBottom>
@@ -315,7 +315,7 @@ const AttendanceHistoryPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" color="text.secondary" gutterBottom>
@@ -331,7 +331,7 @@ const AttendanceHistoryPage = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" color="text.secondary" gutterBottom>
@@ -351,7 +351,7 @@ const AttendanceHistoryPage = () => {
       {/* Filters */}
       <Paper sx={{ p: 2, mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <TextField
               fullWidth
               placeholder="Search by date or notes..."
@@ -368,7 +368,7 @@ const AttendanceHistoryPage = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <SimpleDatePicker
               label="Start Date"
               value={startDate}
@@ -381,7 +381,7 @@ const AttendanceHistoryPage = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <SimpleDatePicker
               label="End Date"
               value={endDate}
@@ -394,7 +394,7 @@ const AttendanceHistoryPage = () => {
             />
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <IconButton color="primary" onClick={handleDateFilter}>
                 <SearchIcon />

@@ -307,7 +307,7 @@ const GanttChart = ({ projectId }) => {
         </Box>
         
         <Grid container spacing={2} sx={{ mb: 2 }}>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Status Filter</InputLabel>
               <Select
@@ -324,7 +324,7 @@ const GanttChart = ({ projectId }) => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Assignee Filter</InputLabel>
               <Select
@@ -343,7 +343,7 @@ const GanttChart = ({ projectId }) => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
               <Typography variant="body2" color="text.secondary" sx={{ mr: 1 }}>
                 Project Duration: {formatDate(startDate)} - {formatDate(endDate)}
@@ -522,13 +522,13 @@ const GanttChart = ({ projectId }) => {
             </DialogTitle>
             <DialogContent dividers>
               <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography variant="body1" gutterBottom>
                     {selectedTask.description || 'No description provided.'}
                   </Typography>
                 </Grid>
                 
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                     Start Date
                   </Typography>
@@ -537,7 +537,7 @@ const GanttChart = ({ projectId }) => {
                   </Typography>
                 </Grid>
                 
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                     Due Date
                   </Typography>
@@ -546,7 +546,7 @@ const GanttChart = ({ projectId }) => {
                   </Typography>
                 </Grid>
                 
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                     Assigned To
                   </Typography>
@@ -557,7 +557,7 @@ const GanttChart = ({ projectId }) => {
                   </Typography>
                 </Grid>
                 
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                     Priority
                   </Typography>
@@ -569,7 +569,7 @@ const GanttChart = ({ projectId }) => {
                 </Grid>
                 
                 {selectedTask.estimatedHours > 0 && (
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Estimated Hours
                     </Typography>
@@ -580,7 +580,7 @@ const GanttChart = ({ projectId }) => {
                 )}
                 
                 {selectedTask.actualHours > 0 && (
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Actual Hours
                     </Typography>
@@ -591,7 +591,7 @@ const GanttChart = ({ projectId }) => {
                 )}
                 
                 {selectedTask.dependencies && selectedTask.dependencies.length > 0 && (
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                       Dependencies
                     </Typography>
@@ -609,7 +609,7 @@ const GanttChart = ({ projectId }) => {
                 )}
                 
                 {selectedTask.subtasks && selectedTask.subtasks.length > 0 && (
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                       Subtasks
                     </Typography>

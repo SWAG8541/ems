@@ -214,7 +214,7 @@ const DepartmentEditPage = () => {
       <Paper sx={{ p: 3 }}>
         <form onSubmit={handleSubmit}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Department Name"
@@ -230,7 +230,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -245,7 +245,7 @@ const DepartmentEditPage = () => {
               </FormControl>
             </Grid>
             
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Description"
@@ -257,7 +257,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Parent Department</InputLabel>
                 <Select
@@ -276,7 +276,7 @@ const DepartmentEditPage = () => {
               </FormControl>
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Department Manager</InputLabel>
                 <Select
@@ -295,13 +295,13 @@ const DepartmentEditPage = () => {
               </FormControl>
             </Grid>
             
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="h6" gutterBottom>
                 Location Details
               </Typography>
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Building"
@@ -311,7 +311,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Floor"
@@ -321,7 +321,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Room"
@@ -331,7 +331,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Address"
@@ -341,7 +341,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="City"
@@ -351,7 +351,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Country"
@@ -361,7 +361,7 @@ const DepartmentEditPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} sx={{ mt: 2 }}>
+            <Grid sx={{ mt: 2 }} size={{ xs: 12 }}>
               <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
                 <Button
                   variant="outlined"

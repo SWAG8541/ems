@@ -1,4 +1,5 @@
 import { io } from 'socket.io-client';
+import { SOCKET_URL } from '../config';
 import { store } from '../redux/store';
 import { addNotification } from '../redux/notification/notificationSlice';
 
@@ -20,7 +21,7 @@ export const initializeSocket = (token, rooms = []) => {
   }
 
   // Create new connection
-  socket = io(import.meta.env.VITE_API_URL || 'http://localhost:5000', {
+  socket = io(SOCKET_URL, {
     auth: {
       token
     },

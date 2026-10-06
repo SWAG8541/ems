@@ -663,7 +663,7 @@ const TasksPage = () => {
           )}
 
           <Grid container spacing={1} sx={{ mb: 1 }}>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <CalendarTodayIcon fontSize="small" sx={{ mr: 0.5, color: 'text.secondary' }} />
                 <Typography variant="caption" color="text.secondary">
@@ -671,7 +671,7 @@ const TasksPage = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <FlagIcon fontSize="small" sx={{ mr: 0.5, color: 'text.secondary' }} />
                 <Chip
@@ -814,7 +814,7 @@ const TasksPage = () => {
       {/* Task Filters */}
       <Paper sx={{ mb: 3, p: 2 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={3}>
+          <Grid size={{ xs: 12, md: 3 }}>
             <TextField
               fullWidth
               placeholder="Search tasks..."
@@ -826,7 +826,7 @@ const TasksPage = () => {
               size="small"
             />
           </Grid>
-          <Grid item xs={12} sm={4} md={2}>
+          <Grid size={{ xs: 12, sm: 4, md: 2 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Status</InputLabel>
               <Select
@@ -843,7 +843,7 @@ const TasksPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={4} md={2}>
+          <Grid size={{ xs: 12, sm: 4, md: 2 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Priority</InputLabel>
               <Select
@@ -859,7 +859,7 @@ const TasksPage = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={4} md={3}>
+          <Grid size={{ xs: 12, sm: 4, md: 3 }}>
             <Button
               variant="outlined"
               startIcon={selectedTasks.length > 0 ? <CheckBoxIcon /> : <CheckBoxOutlineBlankIcon />}
@@ -869,7 +869,7 @@ const TasksPage = () => {
               {selectedTasks.length === filteredTasks.length ? 'Deselect All' : 'Select All'}
             </Button>
           </Grid>
-          <Grid item xs={12} sm={4} md={3}>
+          <Grid size={{ xs: 12, sm: 4, md: 3 }}>
             <FormControl fullWidth size="small">
               <InputLabel>Assignee</InputLabel>
               <Select
@@ -898,7 +898,7 @@ const TasksPage = () => {
       ) : (
         <Grid container spacing={2}>
           {/* To Do Column */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Paper sx={{ p: 2, bgcolor: '#f5f5f5', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
@@ -919,7 +919,7 @@ const TasksPage = () => {
           </Grid>
 
           {/* In Progress Column */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Paper sx={{ p: 2, bgcolor: '#e3f2fd', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
@@ -940,7 +940,7 @@ const TasksPage = () => {
           </Grid>
 
           {/* Review Column */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Paper sx={{ p: 2, bgcolor: '#fff8e1', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
@@ -961,7 +961,7 @@ const TasksPage = () => {
           </Grid>
 
           {/* Done Column */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Paper sx={{ p: 2, bgcolor: '#e8f5e9', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
@@ -998,7 +998,7 @@ const TasksPage = () => {
 
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Task Title"
@@ -1012,7 +1012,7 @@ const TasksPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Description"
@@ -1025,7 +1025,7 @@ const TasksPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -1042,7 +1042,7 @@ const TasksPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Priority</InputLabel>
                 <Select
@@ -1059,7 +1059,7 @@ const TasksPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Assignee</InputLabel>
                 <Select
@@ -1078,7 +1078,7 @@ const TasksPage = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Estimated Hours"
@@ -1091,7 +1091,7 @@ const TasksPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Start Date"
                 value={formData.startDate}
@@ -1104,7 +1104,7 @@ const TasksPage = () => {
               />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Due Date"
                 value={formData.dueDate}

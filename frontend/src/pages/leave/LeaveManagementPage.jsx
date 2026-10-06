@@ -389,19 +389,19 @@ const LeaveManagementPage = () => {
       field: 'startDate',
       headerName: 'Start Date',
       width: 120,
-      valueFormatter: (params) => formatDate(params.value)
+      valueFormatter: (value) => formatDate(value)
     },
     {
       field: 'endDate',
       headerName: 'End Date',
       width: 120,
-      valueFormatter: (params) => formatDate(params.value)
+      valueFormatter: (value) => formatDate(value)
     },
     {
       field: 'totalDays',
       headerName: 'Days',
       width: 80,
-      valueFormatter: (params) => params.value === 0.5 ? '½ day' : params.value
+      valueFormatter: (value) => value === 0.5 ? '½ day' : value
     },
     {
       field: 'status',
@@ -469,7 +469,7 @@ const LeaveManagementPage = () => {
 
       {/* Leave Balance Cards */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -487,7 +487,7 @@ const LeaveManagementPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -505,7 +505,7 @@ const LeaveManagementPage = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -543,10 +543,10 @@ const LeaveManagementPage = () => {
           <DataGrid
             rows={filteredLeaveRequests}
             columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5, 10, 20]}
+            initialState={{ pagination: { paginationModel: { pageSize: 5, page: 0 } } }}
+            pageSizeOptions={[5, 10, 20]}
             getRowId={(row) => row._id}
-            disableSelectionOnClick
+            disableRowSelectionOnClick
           />
         )}
       </Paper>
@@ -561,7 +561,7 @@ const LeaveManagementPage = () => {
         <DialogTitle>Request Leave</DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth error={!!formErrors.leaveType}>
                 <InputLabel>Leave Type</InputLabel>
                 <Select
@@ -583,7 +583,7 @@ const LeaveManagementPage = () => {
                 )}
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControlLabel
                 control={
                   <Switch
@@ -609,7 +609,7 @@ const LeaveManagementPage = () => {
                 </FormControl>
               )}
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="Start Date"
                 value={leaveFormData.startDate}
@@ -623,7 +623,7 @@ const LeaveManagementPage = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SimpleDatePicker
                 label="End Date"
                 value={leaveFormData.endDate}
@@ -637,7 +637,7 @@ const LeaveManagementPage = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 name="reason"
                 label="Reason for Leave"
@@ -650,12 +650,12 @@ const LeaveManagementPage = () => {
                 helperText={formErrors.reason}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant="subtitle1" gutterBottom>
                 Emergency Contact Information
               </Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <TextField
                 name="emergencyContact.name"
                 label="Contact Name"
@@ -666,7 +666,7 @@ const LeaveManagementPage = () => {
                 helperText={formErrors['emergencyContact.name']}
               />
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <TextField
                 name="emergencyContact.phone"
                 label="Contact Phone"
@@ -677,7 +677,7 @@ const LeaveManagementPage = () => {
                 helperText={formErrors['emergencyContact.phone']}
               />
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <TextField
                 name="emergencyContact.relationship"
                 label="Relationship"
@@ -686,7 +686,7 @@ const LeaveManagementPage = () => {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 name="handoverNotes"
                 label="Handover Notes"
@@ -698,7 +698,7 @@ const LeaveManagementPage = () => {
                 placeholder="Please provide any handover information for your team"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl fullWidth>
                 <InputLabel>Work Covered By</InputLabel>
                 <Select
@@ -744,13 +744,13 @@ const LeaveManagementPage = () => {
           <DialogTitle>Leave Request Details</DialogTitle>
           <DialogContent>
             <Grid container spacing={2} sx={{ mt: 1 }}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">Leave Type</Typography>
                 <Typography variant="body1">
                   {getLeaveTypeLabel(selectedLeave.leaveType)}
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">Status</Typography>
                 <Chip
                   label={selectedLeave.status.charAt(0).toUpperCase() + selectedLeave.status.slice(1)}
@@ -758,25 +758,25 @@ const LeaveManagementPage = () => {
                   size="small"
                 />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">Start Date</Typography>
                 <Typography variant="body1">
                   {formatDate(selectedLeave.startDate)}
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">End Date</Typography>
                 <Typography variant="body1">
                   {formatDate(selectedLeave.endDate)}
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">Total Days</Typography>
                 <Typography variant="body1">
                   {selectedLeave.totalDays === 0.5 ? '½ day' : selectedLeave.totalDays}
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle2">Half Day</Typography>
                 <Typography variant="body1">
                   {selectedLeave.isHalfDay ? (
@@ -784,7 +784,7 @@ const LeaveManagementPage = () => {
                   ) : 'No'}
                 </Typography>
               </Grid>
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Typography variant="subtitle2">Reason</Typography>
                 <Typography variant="body1">
                   {selectedLeave.reason}
@@ -792,22 +792,22 @@ const LeaveManagementPage = () => {
               </Grid>
               {selectedLeave.emergencyContact && (
                 <>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="subtitle2">Emergency Contact</Typography>
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="body2" color="text.secondary">Name</Typography>
                     <Typography variant="body1">
                       {selectedLeave.emergencyContact.name || 'N/A'}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="body2" color="text.secondary">Phone</Typography>
                     <Typography variant="body1">
                       {selectedLeave.emergencyContact.phone || 'N/A'}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="body2" color="text.secondary">Relationship</Typography>
                     <Typography variant="body1">
                       {selectedLeave.emergencyContact.relationship || 'N/A'}
@@ -816,7 +816,7 @@ const LeaveManagementPage = () => {
                 </>
               )}
               {selectedLeave.handoverNotes && (
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography variant="subtitle2">Handover Notes</Typography>
                   <Typography variant="body1">
                     {selectedLeave.handoverNotes}
@@ -824,7 +824,7 @@ const LeaveManagementPage = () => {
                 </Grid>
               )}
               {selectedLeave.statusHistory && selectedLeave.statusHistory.length > 0 && (
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography variant="subtitle2" gutterBottom>Status History</Typography>
                   {selectedLeave.statusHistory.map((history, index) => (
                     <Box key={index} sx={{ mb: 1, display: 'flex', alignItems: 'center' }}>

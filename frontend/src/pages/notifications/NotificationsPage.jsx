@@ -236,7 +236,7 @@ const NotificationsPage = () => {
       </Paper>
 
       <Grid container spacing={2} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <TextField
             fullWidth
             placeholder="Search notifications..."
@@ -252,7 +252,7 @@ const NotificationsPage = () => {
             size="small"
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box sx={{ display: 'flex', gap: 1 }}>
             <Button
               variant="outlined"

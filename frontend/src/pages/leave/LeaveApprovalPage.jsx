@@ -234,7 +234,7 @@ const LeaveApprovalPage = () => {
       
       {/* Summary Cards */}
       <Grid container spacing={2} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -373,7 +373,7 @@ const LeaveApprovalPage = () => {
         <DialogContent dividers>
           {selectedLeave && (
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Employee
                 </Typography>
@@ -385,7 +385,7 @@ const LeaveApprovalPage = () => {
                 </Typography>
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Department
                 </Typography>
@@ -394,11 +394,11 @@ const LeaveApprovalPage = () => {
                 </Typography>
               </Grid>
               
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Divider sx={{ my: 2 }} />
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Leave Type
                 </Typography>
@@ -409,7 +409,7 @@ const LeaveApprovalPage = () => {
                 />
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Total Days
                 </Typography>
@@ -418,7 +418,7 @@ const LeaveApprovalPage = () => {
                 </Typography>
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Start Date
                 </Typography>
@@ -430,7 +430,7 @@ const LeaveApprovalPage = () => {
                 </Box>
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   End Date
                 </Typography>
@@ -442,7 +442,7 @@ const LeaveApprovalPage = () => {
                 </Box>
               </Grid>
               
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Reason
                 </Typography>
@@ -455,14 +455,14 @@ const LeaveApprovalPage = () => {
               
               {selectedLeave.emergencyContact && (
                 <>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Divider sx={{ my: 2 }} />
                     <Typography variant="h6" gutterBottom>
                       Emergency Contact
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Name
                     </Typography>
@@ -471,7 +471,7 @@ const LeaveApprovalPage = () => {
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Phone
                     </Typography>
@@ -480,7 +480,7 @@ const LeaveApprovalPage = () => {
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{ xs: 12, md: 4 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Relationship
                     </Typography>
@@ -493,14 +493,14 @@ const LeaveApprovalPage = () => {
               
               {selectedLeave.handoverNotes && (
                 <>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Divider sx={{ my: 2 }} />
                     <Typography variant="h6" gutterBottom>
                       Work Handover
                     </Typography>
                   </Grid>
                   
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Handover Notes
                     </Typography>
@@ -514,7 +514,7 @@ const LeaveApprovalPage = () => {
               )}
               
               {selectedLeave.workCoveredBy && (
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Work Covered By
                   </Typography>
@@ -524,14 +524,14 @@ const LeaveApprovalPage = () => {
                 </Grid>
               )}
               
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Divider sx={{ my: 2 }} />
                 <Typography variant="h6" gutterBottom>
                   Application Details
                 </Typography>
               </Grid>
               
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Typography variant="subtitle1" gutterBottom>
                   Applied On
                 </Typography>

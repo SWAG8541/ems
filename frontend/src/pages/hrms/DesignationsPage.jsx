@@ -387,7 +387,7 @@ const DesignationsPage = () => {
         
         <DialogContent dividers>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Designation Name"
@@ -401,7 +401,7 @@ const DesignationsPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -416,7 +416,7 @@ const DesignationsPage = () => {
               </FormControl>
             </Grid>
             
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Description"
@@ -429,7 +429,7 @@ const DesignationsPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <FormControl fullWidth margin="normal">
                 <InputLabel>Department</InputLabel>
                 <Select
@@ -448,7 +448,7 @@ const DesignationsPage = () => {
               </FormControl>
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 fullWidth
                 label="Level"
@@ -461,7 +461,7 @@ const DesignationsPage = () => {
               />
             </Grid>
             
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label="Responsibilities (comma-separated)"

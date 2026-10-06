@@ -389,11 +389,11 @@ const TaskDetailPage = () => {
 
       {/* Task Details */}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Paper sx={{ p: 3, mb: 3 }}>
             {editMode ? (
               <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <TextField
                     fullWidth
                     label="Task Title"
@@ -406,7 +406,7 @@ const TaskDetailPage = () => {
                   />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <TextField
                     fullWidth
                     label="Description"
@@ -421,7 +421,7 @@ const TaskDetailPage = () => {
                   />
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <FormControl fullWidth>
                     <InputLabel>Status</InputLabel>
                     <Select
@@ -439,7 +439,7 @@ const TaskDetailPage = () => {
                   </FormControl>
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <FormControl fullWidth>
                     <InputLabel>Priority</InputLabel>
                     <Select
@@ -455,7 +455,7 @@ const TaskDetailPage = () => {
                   </FormControl>
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <SimpleDatePicker
                     label="Due Date"
                     value={formData.dueDate}
@@ -470,7 +470,7 @@ const TaskDetailPage = () => {
                   />
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <TextField
                     fullWidth
                     label="Estimated Hours"
@@ -508,7 +508,7 @@ const TaskDetailPage = () => {
                 </Typography>
 
                 <Grid container spacing={2} sx={{ mt: 2 }}>
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Project
                     </Typography>
@@ -517,7 +517,7 @@ const TaskDetailPage = () => {
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Assignee
                     </Typography>
@@ -529,7 +529,7 @@ const TaskDetailPage = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Due Date
                     </Typography>
@@ -541,7 +541,7 @@ const TaskDetailPage = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Estimated Hours
                     </Typography>
@@ -550,7 +550,7 @@ const TaskDetailPage = () => {
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Typography variant="subtitle2" color="text.secondary">
                       Completion
                     </Typography>
@@ -649,7 +649,7 @@ const TaskDetailPage = () => {
         </Grid>
 
         {/* Comments */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           {task && (
             <Paper sx={{ p: 3, height: '100%' }}>
               <Typography variant="h6" gutterBottom>

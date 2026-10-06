@@ -1,8 +1,13 @@
 // API configuration
 // Check if window._env_ exists (for runtime environment variables)
 const getEnv = (key, defaultValue) => {
-  if (window._env_ && window._env_[key]) {
+  if (typeof window !== 'undefined' && window._env_ && window._env_[key]) {
     return window._env_[key];
+  }
+
+  // Vite environment variables
+  if (import.meta.env?.[key]) {
+    return import.meta.env[key];
   }
 
   // For Create React App environment variables
@@ -13,7 +18,9 @@ const getEnv = (key, defaultValue) => {
   return defaultValue;
 };
 
-export const API_BASE_URL = getEnv('REACT_APP_API_URL', 'http://localhost:5000/api');
+export const API_BASE_URL = getEnv('VITE_API_URL', getEnv('REACT_APP_API_URL', 'http://localhost:7005/api')).replace(/\/+$/, '');
+
+export const SOCKET_URL = getEnv('VITE_SOCKET_URL', API_BASE_URL.replace(/\/api$/, ''));
 
 // Authentication configuration
 export const AUTH_TOKEN_KEY = 'auth_token';
